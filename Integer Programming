@@ -1,0 +1,73 @@
+---
+title: "Integer Programming"
+author: "Steven Kalinoff"
+date: "2022-11-19"
+output:
+  word_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#Goal is to mimimize cost of workers while not going under the min amount of works needed per day. 
+
+```{r}
+library("lpSolveAPI")
+getwd() #checking working directory to put lp in correct location
+AP = read.lp("SSK_AP.lp")
+if(FALSE {
+AP = 
+min: 775s1 + 800s2 + 800s3 + 800s4 + 800s5 + 775s6 + 750s7;  
+
+s2 + s3 + s4 + s5 + s6 >= 18;
+s3 + s4 + s5 + s6 + s7 >= 27;
+s1 + s4 + s5 + s6 + s7 >= 22; 
+s1 + s2 + s5 + s6 + s7 >= 26;
+s1 + s2 + s3 + s6 + s7 >= 25;
+s1 + s2 + s3 + s4 + s7 >= 21;
+s1 + s2 + s3 + s4 + s5 >= 19; 
+
+int s1, s2, s3, s4, s5, s6, s7;
+}
+AP 
+solve(AP)
+a=get.objective(AP)
+b=get.variables(AP)
+a #25675$ = to the minimum cost needed to achieve constraints  
+b # no of shifts per day needed
+s1=2  
+s2=4  
+s3=5  
+s4=0  
+s5=8  
+s6=1 
+s7=13
+#running T/F to ensure model compliance 
+s2 + s3 + s4 + s5 + s6 >= 18
+s3 + s4 + s5 + s6 + s7 >= 27
+s1 + s4 + s5 + s6 + s7 >= 22
+s1 + s2 + s5 + s6 + s7 >= 26
+s1 + s2 + s3 + s6 + s7 >= 25
+s1 + s2 + s3 + s4 + s7 >= 21
+s1 + s2 + s3 + s4 + s5 >= 19
+#printing actuals 
+sh1=s2 + s3 + s4 + s5 + s6  
+sh2=s3 + s4 + s5 + s6 + s7 
+sh3=s1 + s4 + s5 + s6 + s7 
+sh4=s1 + s2 + s5 + s6 + s7 
+sh5=s1 + s2 + s3 + s6 + s7 
+sh6=s1 + s2 + s3 + s4 + s7 
+sh7=s1 + s2 + s3 + s4 + s5
+sh1
+sh2
+sh3
+sh4
+sh5
+sh6
+sh7
+
+```
+
+
